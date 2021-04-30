@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Leaflet offline map</title>
+		<link rel="stylesheet" charset="utf-8" href="leaflet.css" />
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }       
+            html, body, #mapid {
+                height: 100%;
+                width: 100vw;
+            }
+        </style>
+	    <script type="text/javascript" charset="utf-8" src="leaflet.js"></script>
+		<script>
+			function onLoad() {
+				var mymap = L.map('mapid').setView([53.89158799690573, 27.553357165010443], 11);
+
+				L.tileLayer('MinskMap2/{z}/{x}/{y}.png',
+				{    maxZoom: 15, minZoom: 11  }).addTo(mymap);
+			}
+		</script>	
+	</head>
+	<body onload="onLoad();"> 
+
+            <div id="mapid"></div>
+	</body>
+</html>
