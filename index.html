@@ -17,10 +17,10 @@
 	    <script type="text/javascript" charset="utf-8" src="leaflet.js"></script>
 		<script>
 			function onLoad() {
-				var mymap = L.map('mapid').setView([53.89158799690573, 27.553357165010443], 11);
+				var mymap = L.map('mapid').setView([53.89158799690573, 27.553357165010443], 13);
 
-				L.tileLayer('MinskMap2/{z}/{x}/{y}.png',
-				{    maxZoom: 15, minZoom: 11  }).addTo(mymap);
+				L.tileLayer('Map/{z}/{x}/{y}.png',
+				{    maxZoom: 16, minZoom: 13  }).addTo(mymap);
 			}
 		</script>	
 	</head>
